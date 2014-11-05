@@ -1,4 +1,4 @@
-angular.module('schedule', ['ui.bootstrap','ui.utils','ui.router','ngAnimate']);
+angular.module('schedule', ['ui.bootstrap', 'ui.utils', 'ui.router', 'ngAnimate', 'main']);
 
 angular.module('schedule').config(function($stateProvider, $urlRouterProvider) {
 
