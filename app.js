@@ -9,6 +9,8 @@ angular.module('schedule').config(function($stateProvider, $urlRouterProvider) {
 
 angular.module('schedule').run(function($rootScope) {
 
+    $.material.init();
+
     $rootScope.safeApply = function(fn) {
         var phase = $rootScope.$$phase;
         if (phase === '$apply' || phase === '$digest') {
