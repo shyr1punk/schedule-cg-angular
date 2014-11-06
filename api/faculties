@@ -2,19 +2,19 @@
     "faculties" : [
         {
             "id": 1,
-            "title": "МФ"
+            "short_title": "МФ"
         },
         {
             "id": 2,
-            "title": "ФАСК"
+            "short_title": "ФАСК"
         },
         {
             "id": 3,
-            "title": "ФУВТ"
+            "short_title": "ФУВТ"
         },
         {
             "id": 4,
-            "title": "ФПМиВТ"
+            "short_title": "ФПМиВТ"
         }
     ]
 }

@@ -1,4 +1,10 @@
 <div class="col-md-4 jumbotron" data-ng-controller="MenuCtrl">
-    <a href="javascript:void(0)" class="btn btn-default btn-raised btn-block" data-ng-repeat="button in buttons">{{ button.title }}</a>
+    <a
+        href="javascript:void(0)"
+        class="btn btn-default btn-raised btn-block"
+        data-ng-repeat="button in buttons"
+        data-ng-click="menuButtonClick(button.id)"
+    >{{ button.short_title }}</a>
+
     <a href="javascript:void(0)" class="btn btn-primary btn-raised btn-block">Назад</a>
 </div>

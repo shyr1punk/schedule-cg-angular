@@ -7,7 +7,17 @@ angular.module('schedule').factory('menuService',function($http, constantsServic
          * @returns {HttpPromise}
          */
         getFaculties: function () {
-            return $http.get(constantsService.apiGetEndpoint() + '/faculties');
+            return $http.get(constantsService.apiGetEndpoint() + 'faculties');
+        },
+
+        /**
+         * Get speciality list by faculty
+         *
+         * @param {Number} faculty faculty id
+         * @returns {HttpPromise}
+         */
+        getSpecialities: function (faculty) {
+            return $http.get(constantsService.apiGetEndpoint() + 'faculty/' + faculty);
         }
     };
 
