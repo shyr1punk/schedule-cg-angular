@@ -1,10 +1,4 @@
-<div class="col-md-4 jumbotron" ng-controller="MenuCtrl">
-    <a href="javascript:void(0)" class="btn btn-default btn-raised btn-block">Группа 1-1</a>
-    <a href="javascript:void(0)" class="btn btn-default btn-raised btn-block">Группа 2-1</a>
-    <a href="javascript:void(0)" class="btn btn-default btn-raised btn-block">Группа 3-1</a>
-    <a href="javascript:void(0)" class="btn btn-default btn-raised btn-block">Группа 3-2</a>
-    <a href="javascript:void(0)" class="btn btn-default btn-raised btn-block">Группа 4-1</a>
-    <a href="javascript:void(0)" class="btn btn-default btn-raised btn-block">Группа 4-2</a>
-    <a href="javascript:void(0)" class="btn btn-default btn-raised btn-block">Группа 5-1</a>
+<div class="col-md-4 jumbotron" data-ng-controller="MenuCtrl">
+    <a href="javascript:void(0)" class="btn btn-default btn-raised btn-block" data-ng-repeat="button in buttons">{{ button.title }}</a>
     <a href="javascript:void(0)" class="btn btn-primary btn-raised btn-block">Назад</a>
 </div>

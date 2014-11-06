@@ -23,3 +23,14 @@ angular.module('schedule').run(function($rootScope) {
     };
 
 });
+
+// http://thegreenpizza.github.io/2013/05/25/building-minification-safe-angular.js-applications/
+
+angular.module('schedule').service('constantsService', [ function() {
+    var constantsService = {
+        apiGetEndpoint: function () {
+            return '/api/';
+        }
+    };
+    return constantsService;
+}]);
