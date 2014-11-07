@@ -8,7 +8,7 @@ angular.module('schedule').factory('menuService',function($http, constantsServic
          */
         getFaculties: function () {
             return $http.get(constantsService.apiGetEndpoint() + 'faculties', {
-                //cache: true
+                cache: true
             });
         },
 
@@ -20,7 +20,7 @@ angular.module('schedule').factory('menuService',function($http, constantsServic
          */
         getSpecialities: function (faculty) {
             return $http.get(constantsService.apiGetEndpoint() + 'faculty/' + faculty, {
-                //cache: true
+                cache: true
             });
         },
 
@@ -33,6 +33,12 @@ angular.module('schedule').factory('menuService',function($http, constantsServic
          */
         getGroups: function (faculty, speciality) {
             return $http.get(constantsService.apiGetEndpoint() + 'faculty/f' + faculty + '/speciality/' + speciality, {
+                cache: true
+            });
+        },
+
+        getGroup: function (group) {
+            return $http.get(constantsService.apiGetEndpoint() + 'group', {
                 //cache: true
             });
         }

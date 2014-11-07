@@ -1,4 +1,4 @@
-angular.module('main').controller('MenuCtrl',function($scope, menuService, $animate) {
+angular.module('main').controller('MenuCtrl',function($scope, menuService, timetableService, $animate) {
 
     $animate.enabled(false);
 
@@ -52,7 +52,23 @@ angular.module('main').controller('MenuCtrl',function($scope, menuService, $anim
             success(function (data) {
                 $scope.buttons = data.groups;
                 $scope.history.speciality = speciality;
-                $scope.menuButtonClick = function () {};
+                $scope.menuButtonClick = $scope.getGroup;
+            }).
+            error(function (data) {
+                console.log(data);
+            });
+    };
+
+    /**
+     * Get group data
+     *
+     * @param {Number} group group id
+     */
+    $scope.getGroup = function (group) {
+        menuService.getGroup($scope.history.faculty, group).
+            success(function (data) {
+                $scope.data = data;
+                $scope.history.group = group;
             }).
             error(function (data) {
                 console.log(data);
