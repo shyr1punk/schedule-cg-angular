@@ -1,4 +1,6 @@
-angular.module('main').controller('MenuCtrl',function($scope, menuService) {
+angular.module('main').controller('MenuCtrl',function($scope, menuService, $animate) {
+
+    $animate.enabled(false);
 
     $scope.getFaculties = function () {
         menuService.getFaculties().
@@ -14,7 +16,6 @@ angular.module('main').controller('MenuCtrl',function($scope, menuService) {
         menuService.getSpecialities(faculty).
             success(function (data) {
                 $scope.buttons = data.spec;
-                $scope.$apply();
             }).
             error(function (data) {
                 console.log(data);
